@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>三</h2>
+		<label>请输入a的值:
+		<input type="text" id="aa"/></label><br/>
+		<label>请输入b的值:
+		<input type="text" id="bb"/></label>
+		<p>
+			<button>确定</button>
+		</p>
+		
+		<hr/>
+		<script >
+			document.write('<h2>一</h2>');
+			let a=10;
+			let b=2;
+			if(a>b){
+				document.write('a大于b');
+			}else if(a<b){
+				document.write('a小于b');
+			}else{
+				document.write('a等于b');
+			}
+			document.write('<hr>');
+			
+			document.write('<h2>二</h2>');
+			let a1=10;
+			if(a1%5===0){
+				document.write('可以被5整除');
+			}else{
+				document.write('不可以被5整除');
+			}
+			document.write('<hr>');
+			
+			document.write('<h2>四</h2>');
+			for(i1=1;i1<=100;i1++){
+				if(i1%2===0){
+					document.write(i1+' ');
+				}
+			}
+			document.write('<hr>');
+			
+			document.write('<h2>五</h2>');
+			let i=1;
+			while(i<=100){
+				if(i%7===0){
+				document.write(i+' ');	
+				}
+				i++;
+			}
+			 document.write('<hr>');
+			
+				document.write('<h2>六</h2>');
+						let a2=1;
+						let b2=5;
+						let c2=3;
+						if(a2>b2 && a2>c2){
+							document.write(a2);
+						}else if(b2>a2 && b2>c2){
+							document.write(b2);
+						}else if(c2>a2 && c2>b2){
+							document.write(c2);
+						}else{
+							document.write(" ");
+						}
+						document.write('<hr>');
+
+			
+			document.write('<h2>七</h2>');
+			let a3='';
+			let b3='';
+			for(i=1;i<=100;i++){
+				if(i%2===0){
+					a3=a3+i+' ';
+				}else{
+				 	b3=b3+i+' ';
+				 }
+			}
+			document.write("偶数是："+a3+' ');
+			document.write("<br/>")
+			document.write("奇数；"+b3+' ');
+			document.write('<hr>');
+			
+			 document.write('<h2>八</h2>');
+			let q = 0;
+			let w = "";
+			let test=(...num)=>{
+				for(let i=num.length-1; i>=0; i--){
+					if(i===0){
+						w=w+num[i];
+					}else{
+						w=w+num[i]+'+';
+					}
+					q+=num[i];
+				}
+				return w+"="+q;
+			}
+			document.write(test(1,2,3,4,5));
+			 document.write('<hr>');
+			 
+			
+			let  qw= document.querySelector('#aa');
+			let  qw1= document.querySelector('#bb');
+			let qw2 = document.querySelector('button');
+			qw2.onclick=function(){
+				if(qw.value=="" || qw1.value==""){
+					alert("错误信息");
+				}else if(isNaN(Number(qw.value)) || isNaN(Number(qw1.value))){
+					alert("错误信息");
+				}else{
+					if(qw.value>qw1.value){
+						alert("a大于b");
+					}else if(qw.value==qw1.value){
+						alert("a等于b")
+					}
+					else{
+						alert("b大于a");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
+
